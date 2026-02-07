@@ -24,16 +24,12 @@
 
 ## Demo
 
-<table>
-  <tr>
-    <th>App Walkthrough</th>
-    <th>Firebase Sync</th>
-  </tr>
-  <tr>
-    <td><video src="screenshots/app.mp4" width="300" /></td>
-    <td><video src="screenshots/firebase.mp4" width="300" /></td>
-  </tr>
-</table>
+
+### 🎬 App Walkthrough
+https://github.com/samebrave/StepScape/raw/main/screenshots/app.mp4
+
+### 🔥 Firebase Sync
+https://github.com/samebrave/StepScape/raw/main/screenshots/firebase.mp4
 
 ---
 
