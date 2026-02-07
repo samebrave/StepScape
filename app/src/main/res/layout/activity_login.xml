@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient"
+    android:fitsSystemWindows="true">
+
+    <!-- White Card with neon dual-shadow (matches Figma drop-shadows) -->
+    <com.sametyigit.stepscape.ui.NeonShadowLayout
+        android:id="@+id/cardLoginWrapper"
+        android:layout_width="382dp"
+        android:layout_height="344dp"
+        android:layout_marginTop="134dp"
+        app:neonCornerRadius="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- StepScape: Sansation Bold, 36sp (Figma), 101dp height, centered in chain -->
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="317dp"
+                android:layout_height="101dp"
+                android:fontFamily="@font/sansation_bold"
+                android:gravity="center"
+                android:text="@string/app_name"
+                android:textColor="@color/text_primary"
+                android:textSize="36sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/tvSubtitle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <!-- Subtitle: Sansation Regular, 22sp, 30sp line-height, 60dp height, 39dp gap -->
+            <TextView
+                android:id="@+id/tvSubtitle"
+                android:layout_width="317dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="39dp"
+                android:fontFamily="@font/sansation"
+                android:gravity="center"
+                android:lineHeight="30sp"
+                android:text="@string/login_subtitle"
+                android:textColor="@color/text_primary"
+                android:textSize="22sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.sametyigit.stepscape.ui.NeonShadowLayout>
+
+    <!-- Google Sign-In Button with neon dual-shadow -->
+    <com.sametyigit.stepscape.ui.NeonShadowLayout
+        android:id="@+id/btnGoogleWrapper"
+        android:layout_width="372dp"
+        android:layout_height="77dp"
+        android:layout_marginBottom="74dp"
+        app:neonCornerRadius="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnGoogleSignIn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/white"
+            android:fontFamily="@font/sansation"
+            android:letterSpacing="-0.02"
+            android:text="@string/continue_with_google"
+            android:textAllCaps="false"
+            android:textColor="@color/neutral_n900"
+            android:textSize="11sp"
+            app:backgroundTint="@color/white"
+            app:cornerRadius="32dp"
+            app:icon="@drawable/ic_google"
+            app:iconGravity="textStart"
+            app:iconPadding="8dp"
+            app:iconSize="20dp"
+            app:iconTint="@null"
+            app:rippleColor="@color/neutral_n40" />
+
+    </com.sametyigit.stepscape.ui.NeonShadowLayout>
+
+    <!-- Loading indicator during sign-in -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:visibility="gone"
+        android:indeterminateTint="@color/orange_primary"
+        app:layout_constraintBottom_toTopOf="@id/btnGoogleWrapper"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardLoginWrapper" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

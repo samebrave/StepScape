@@ -1,0 +1,22 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.StepScape" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:fontFamily">@font/sansation</item>
+        <item name="fontFamily">@font/sansation</item>
+        <!-- Override Material3 default colors to prevent purple tinting -->
+        <item name="colorPrimary">@color/neutral_n900</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimaryContainer">@color/white</item>
+        <item name="colorOnPrimaryContainer">@color/neutral_n900</item>
+        <item name="colorSecondary">@color/neutral_n400</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorSecondaryContainer">@color/white</item>
+        <item name="colorOnSecondaryContainer">@color/neutral_n900</item>
+        <item name="colorSurface">@color/white</item>
+        <item name="colorOnSurface">@color/neutral_n900</item>
+        <item name="colorSurfaceVariant">@color/neutral_n40</item>
+        <item name="colorOnSurfaceVariant">@color/neutral_n400</item>
+        <item name="android:colorBackground">@color/white</item>
+        <item name="colorOnBackground">@color/neutral_n900</item>
+    </style>
+</resources>

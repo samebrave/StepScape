@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Background track: Light orange circle (Figma shows #FFF4E6) -->
+    <item android:id="@android:id/background">
+        <shape
+            android:shape="ring"
+            android:innerRadius="86dp"
+            android:thickness="18dp"
+            android:useLevel="false">
+            <solid android:color="@color/progress_track" />
+        </shape>
+    </item>
+    <!-- Progress: Figma Orange #FF9500 -->
+    <item android:id="@android:id/progress">
+        <rotate
+            android:fromDegrees="270"
+            android:toDegrees="270">
+            <shape
+                android:shape="ring"
+                android:innerRadius="86dp"
+                android:thickness="18dp"
+                android:useLevel="true">
+                <solid android:color="@color/orange_primary" />
+            </shape>
+        </rotate>
+    </item>
+</layer-list>

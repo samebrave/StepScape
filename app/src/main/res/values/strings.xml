@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">StepScape</string>
+    <string name="login_subtitle">Health Data That\nActually Makes Sense</string>
+    <string name="continue_with_google">Continue with Google</string>
+    <string name="home">Home</string>
+    <string name="logs">Logs</string>
+    <string name="steps">Steps</string>
+    <string name="goal">Goal</string>
+    <string name="daily_goal">Daily Goal: %d</string>
+    <string name="steps_remaining">%d steps to go!</string>
+    <string name="goal_reached">Goal reached! 🎉</string>
+    <string name="day">Day</string>
+    <string name="week">Week</string>
+    <string name="month">Month</string>
+    <string name="six_month">6 Month</string>
+    <string name="year">Year</string>
+    <string name="synced">Synced</string>
+    <string name="not_synced">Not Synced</string>
+    <string name="step_log_format" formatted="false">%s - %d steps</string>
+    <string name="no_logs">No step logs yet</string>
+    <string name="health_connect_permission">Health Connect permission is required to track your steps</string>
+    <string name="health_connect_required">Health Connect Required</string>
+    <string name="health_connect_install_message">This app requires Health Connect to track your steps. Would you like to install it?</string>
+    <string name="health_connect_unavailable">Health Connect is not available on this device</string>
+    <string name="no_step_data">No step data available</string>
+    <string name="play_store_error">Could not open Play Store</string>
+    <string name="install">Install</string>
+    <string name="cancel">Cancel</string>
+    <string name="error_loading_data">Error loading step data</string>
+    <string name="steps_goal_format">/10000</string>
+    <string name="goal_encouragement_0">Every journey starts with a single step.\nLet\'s get moving!</string>
+    <string name="goal_encouragement_2000">Nice warm-up! You\'re building\nsome solid momentum.</string>
+    <string name="goal_encouragement_4000">Almost halfway there!\nKeep up the great pace.</string>
+    <string name="goal_encouragement_6000">Over halfway done!\nYou\'re on fire today.</string>
+    <string name="goal_encouragement_8000">You\'re very close to your goal,\nso keep pushing forward.</string>
+    <string name="goal_encouragement_done">Amazing! You\'ve crushed your\ndaily goal. Well done! \uD83C\uDF89</string>
+    <string name="range">Range</string>
+    <string name="back">Back</string>
+</resources>

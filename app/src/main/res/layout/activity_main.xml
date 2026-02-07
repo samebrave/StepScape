@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="false"
+    tools:context=".MainActivity">
+
+    <!-- Home Title: Sansation Bold, 22sp (Figma), positioned 34dp from left -->
+    <TextView
+        android:id="@+id/tvHomeTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="0dp"
+        android:fontFamily="@font/sansation_bold"
+        android:gravity="center_vertical"
+        android:text="@string/home"
+        android:textColor="@color/text_primary"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Logs Button: Pill shape, 80x23dp, Sansation Regular 16sp -->
+    <TextView
+        android:id="@+id/btnLogs"
+        android:layout_width="80dp"
+        android:layout_height="23dp"
+        android:layout_marginEnd="18dp"
+        android:background="@drawable/bg_pill_button"
+        android:fontFamily="@font/sansation"
+        android:gravity="center"
+        android:letterSpacing="-0.02"
+        android:text="@string/logs"
+        android:textColor="@color/text_primary"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/tvHomeTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvHomeTitle" />
+
+    <!-- Progress Card: with neon dual-shadow (matches Figma) -->
+    <com.sametyigit.stepscape.ui.NeonShadowLayout
+        android:id="@+id/cardProgressWrapper"
+        android:layout_width="382dp"
+        android:layout_height="325dp"
+        android:layout_marginTop="5dp"
+        app:neonCornerRadius="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvHomeTitle">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cardProgress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- Circular Progress: 209x209dp with rounded caps -->
+            <FrameLayout
+                android:id="@+id/frameProgress"
+                android:layout_width="209dp"
+                android:layout_height="209dp"
+                android:layout_marginTop="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.sametyigit.stepscape.ui.CircularProgressView
+                    android:id="@+id/circularProgress"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <!-- Step Count: Sansation Regular, 34sp, Orange #FF9500 -->
+                    <TextView
+                        android:id="@+id/tvStepCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sansation"
+                        android:letterSpacing="-0.02"
+                        android:textColor="@color/orange_primary"
+                        android:textSize="34sp"
+                        tools:text="7500" />
+
+                    <!-- Goal: Sansation Regular, 20sp, Gray #7D7D7D -->
+                    <TextView
+                        android:id="@+id/tvStepsLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sansation"
+                        android:letterSpacing="-0.02"
+                        android:text="@string/steps_goal_format"
+                        android:textColor="@color/text_hint"
+                        android:textSize="20sp" />
+                </LinearLayout>
+            </FrameLayout>
+
+            <!-- Encouragement Text: Sansation Regular, 16sp, Gray #565656, 266dp wide -->
+            <TextView
+                android:id="@+id/tvGoalStatus"
+                android:layout_width="266dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/sansation"
+                android:gravity="center"
+                android:letterSpacing="-0.02"
+                android:lineHeight="23sp"
+                tools:text="@string/goal_encouragement_0"
+                android:textColor="@color/text_secondary"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/frameProgress" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.sametyigit.stepscape.ui.NeonShadowLayout>
+
+    <!-- Segmented Control: 358dp wide, 28dp height -->
+    <HorizontalScrollView
+        android:id="@+id/scrollChips"
+        android:layout_width="358dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="0dp"
+        android:background="@drawable/bg_segmented_control"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardProgressWrapper">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="2dp">
+
+            <TextView
+                android:id="@+id/chipDay"
+                android:layout_width="0dp"
+                android:layout_height="24dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_chip_selected_segment"
+                android:fontFamily="@font/sansation"
+                android:gravity="center"
+                android:letterSpacing="-0.02"
+                android:minWidth="70dp"
+                android:paddingHorizontal="10dp"
+                android:text="@string/day"
+                android:textColor="@color/text_primary"
+                android:textSize="11sp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="12dp"
+                android:alpha="0.3"
+                android:background="@color/segmented_separator" />
+
+            <TextView
+                android:id="@+id/chipWeek"
+                android:layout_width="0dp"
+                android:layout_height="24dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/sansation"
+                android:gravity="center"
+                android:letterSpacing="-0.02"
+                android:minWidth="70dp"
+                android:paddingHorizontal="10dp"
+                android:text="@string/week"
+                android:textColor="@color/text_primary"
+                android:textSize="11sp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="12dp"
+                android:alpha="0.3"
+                android:background="@color/segmented_separator" />
+
+            <TextView
+                android:id="@+id/chipMonth"
+                android:layout_width="0dp"
+                android:layout_height="24dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/sansation"
+                android:gravity="center"
+                android:letterSpacing="-0.02"
+                android:minWidth="70dp"
+                android:paddingHorizontal="10dp"
+                android:text="@string/month"
+                android:textColor="@color/text_primary"
+                android:textSize="11sp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="12dp"
+                android:alpha="0.3"
+                android:background="@color/segmented_separator" />
+
+            <TextView
+                android:id="@+id/chip6Month"
+                android:layout_width="0dp"
+                android:layout_height="24dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/sansation"
+                android:gravity="center"
+                android:letterSpacing="-0.02"
+                android:minWidth="70dp"
+                android:paddingHorizontal="10dp"
+                android:text="@string/six_month"
+                android:textColor="@color/text_primary"
+                android:textSize="11sp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="12dp"
+                android:alpha="0.3"
+                android:background="@color/segmented_separator" />
+
+            <TextView
+                android:id="@+id/chipYear"
+                android:layout_width="0dp"
+                android:layout_height="24dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/sansation"
+                android:gravity="center"
+                android:letterSpacing="-0.02"
+                android:minWidth="70dp"
+                android:paddingHorizontal="10dp"
+                android:text="@string/year"
+                android:textColor="@color/text_primary"
+                android:textSize="11sp" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- Chart Card: with neon dual-shadow (matches Figma) -->
+    <com.sametyigit.stepscape.ui.NeonShadowLayout
+        android:id="@+id/cardChartWrapper"
+        android:layout_width="391dp"
+        android:layout_height="346dp"
+        android:layout_marginTop="0dp"
+        android:translationY="-9dp"
+        app:neonCornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/scrollChips">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cardChart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="11dp">
+
+            <!-- Range Label -->
+            <TextView
+                android:id="@+id/tvRangeLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sansation"
+                android:letterSpacing="-0.02"
+                android:text="@string/range"
+                android:textColor="@color/neutral_n400"
+                android:textSize="11sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- Steps Count: Poppins Regular, 28sp -->
+            <TextView
+                android:id="@+id/tvChartSteps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/neutral_n900"
+                android:textSize="28sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvRangeLabel"
+                tools:text="1055" />
+
+            <!-- Steps Label -->
+            <TextView
+                android:id="@+id/tvStepsUnit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:fontFamily="@font/sansation"
+                android:letterSpacing="-0.02"
+                android:text="@string/steps"
+                android:textColor="@color/neutral_n400"
+                android:textSize="15sp"
+                app:layout_constraintBaseline_toBaselineOf="@id/tvChartSteps"
+                app:layout_constraintStart_toEndOf="@id/tvChartSteps" />
+
+            <!-- Date Range -->
+            <TextView
+                android:id="@+id/tvDateRange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sansation"
+                android:letterSpacing="-0.02"
+                android:textColor="@color/neutral_n400"
+                android:textSize="11sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvChartSteps"
+                tools:text="May 14-20, 2024" />
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/lineChart"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvDateRange" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.sametyigit.stepscape.ui.NeonShadowLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

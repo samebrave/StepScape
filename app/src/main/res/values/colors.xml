@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Figma Foundation Colors -->
+    <color name="neutral_n900">#141517</color>
+    <color name="neutral_n400">#677184</color>
+    <color name="neutral_n40">#D9D9D9</color>
+    <color name="neutral_n0">#FFFFFF</color>
+
+    <!-- Gradient Colors (Figma exact values) -->
+    <color name="gradient_pink">#33FF00E1</color>
+    <color name="gradient_cyan">#FFBBFFF8</color>
+
+    <!-- Figma Orange Colors -->
+    <color name="orange_primary">#FF9500</color>
+    <color name="orange_light">#FFF4E6</color>
+
+    <!-- Chart/Graph Colors -->
+    <color name="blue_graph">#29B6F6</color>
+    <color name="blue_dark">#0288D1</color>
+
+    <!-- UI Colors (Figma exact) -->
+    <color name="card_background">#FFFFFF</color>
+    <color name="text_primary">#000000</color>
+    <color name="text_secondary">#565656</color>
+    <color name="text_hint">#7D7D7D</color>
+    <color name="divider">#D9D9D9</color>
+
+    <!-- Neon Shadow Colors -->
+    <color name="shadow_pink">#EFCAEE</color>
+    <color name="shadow_cyan">#BCE9E6</color>
+
+    <!-- Segmented Control -->
+    <color name="segmented_bg">#5E5FA9DA</color>
+    <color name="segmented_separator">#8E8E93</color>
+
+    <!-- Status Colors -->
+    <color name="synced_green">#4CAF50</color>
+    <color name="not_synced_red">#F44336</color>
+
+    <!-- Progress Colors -->
+    <color name="progress_background">#E0E0E0</color>
+    <color name="progress_track">#FFF4E6</color>
+    <color name="progress_track_orange">#33FF9500</color>
+</resources>

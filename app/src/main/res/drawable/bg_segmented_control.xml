@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Segmented Control background: Semi-transparent blue, 9dp corner radius -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="@color/segmented_bg" />
+    <corners android:radius="9dp" />
+</shape>
