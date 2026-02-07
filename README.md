@@ -24,14 +24,11 @@
 
 ## Demo
 
+https://github.com/user-attachments/assets/d394226f-1650-4ffe-8b1f-06ab4055f6d2
 
-### 🎬 App Walkthrough
-https://github.com/samebrave/StepScape/raw/main/screenshots/app.mp4
+https://github.com/user-attachments/assets/36337e0f-bb6f-40bb-b9bb-db7a943fb3b7
 
-### 🔥 Firebase Sync
-https://github.com/samebrave/StepScape/raw/main/screenshots/firebase.mp4
 
----
 
 ## Overview
 
